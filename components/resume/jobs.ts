@@ -42,7 +42,8 @@ export const jobs: Job[] = [
       'Worked with designers to build UI/UX for editing responsive websites and reusable components that were robust enough to allow for deep customization, but still easy to use.',
       "Built automation to scrape, scan, and convert pre-existing websites into fully functional responsive web apps on the company's custom CMS product using Google Cloud APIs.",
       'Mentored and developed junior developers. Regularly participated in code reviews.',
-      "Lead discussions and demos on technical topics to share knowledge and insights I'd gained with the rest of the development team.",
+      'Investigate JavaScript performance bottlenecks and where we could cut down on bundle sizes to improve load speeds across the entire platform.',
+      "Lead discussions and demos on technical topics to share knowledge and insights I'd gained with the rest of the development team, for example: taking still photos with WebRTC.",
       'Actively participated in agile ceremonies and sprint refinement meetings where we work on breaking down larger epics into user smaller stories and estimate how long each story will take.',
     ],
     skills: [
