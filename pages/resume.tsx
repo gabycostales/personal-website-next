@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useColorScheme } from '../hooks/theme';
 import PageTitle from '../components/page-title';
 import Work from '../components/resume/Work';
-import styles from '../styles/Resume.module.css';
 
 const Resume: NextPage = () => {
   const { isLightMode } = useColorScheme();
@@ -14,19 +13,19 @@ const Resume: NextPage = () => {
     <main className="main-container">
       <PageTitle title="resume" />
 
-      <section className={styles.education}>
+      <section className="resume--education">
         <div
-          className={`${styles.content} light-mode-bg ${
+          className={`resume--content light-mode-bg ${
             isLightMode && 'box-highlight'
           }`}
         >
-          <div className={styles.title}>
-            <div className={styles.icon}>
+          <div className="resume--title">
+            <div className="resume--icon">
               <FontAwesomeIcon icon={faGraduationCap} />
             </div>
             <h2>education</h2>
           </div>
-          <div className={styles.college}>
+          <div className="resume--college">
             <h3>University of Miami</h3>
             <p>
               Bachelor{"'"}s Degree, <b>Computer Science</b>
@@ -40,12 +39,12 @@ const Resume: NextPage = () => {
 
       <section>
         <div
-          className={`${styles.content} light-mode-bg ${
+          className={`resume--content light-mode-bg ${
             isLightMode && 'box-highlight'
           }`}
         >
-          <div className={styles.title}>
-            <div className={styles.icon}>
+          <div className="resume--title">
+            <div className="resume--icon">
               <FontAwesomeIcon icon={faMugHot} />
             </div>
             <h2>work</h2>

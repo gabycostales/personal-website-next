@@ -1,7 +1,5 @@
 import { Job, jobs } from './jobs';
 
-import styles from './Work.module.css';
-
 const getJobKey = (job: Job): string => {
   const convert = (key: string): string => key.replace(/ /g, '').toLowerCase();
 
@@ -14,15 +12,15 @@ export const Work = () => {
       {jobs.map((job) => {
         return (
           <div
-            className="job-description"
+            className="job"
             key={getJobKey(job)}
             style={{ marginBottom: '40px' }}
           >
-            <div className={styles.title}>
+            <div className="job--title">
               <h3>{job.title}</h3>
             </div>
 
-            <div className={styles.company}>
+            <div className="job--company">
               <p>{job.company}</p>
               <p>
                 {job.startDate} - {job.endDate}
@@ -30,19 +28,19 @@ export const Work = () => {
             </div>
 
             {job.skills?.length && (
-              <div className={styles.skills}>
+              <div className="job--skills">
                 {job.skills.map((skill) => {
                   return (
-                    <div key={skill} className={styles.skill}>
+                    <div key={skill} className="job--skill">
                       <span>{skill}</span>
-                      <div className={styles['skill-bg']} />
+                      <div className="job--skill-bg" />
                     </div>
                   );
                 })}
               </div>
             )}
 
-            <ul className={styles.about}>
+            <ul className="job--about">
               {job.about.map((desc) => {
                 return <li key={desc.slice(0, 15)}>{desc}</li>;
               })}

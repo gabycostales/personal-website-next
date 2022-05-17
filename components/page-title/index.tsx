@@ -1,15 +1,13 @@
-import styles from './PageTitle.module.css';
-
 type PageTitleProps = {
   title: string;
 };
 
 const PageTitle = ({ title }: PageTitleProps) => {
   return (
-    <h1 className={styles.title}>
+    <h1 className="page-title">
       <>
-        <span className={styles.bracket}>{'<'} </span> {title}{' '}
-        <span className={styles.bracket}> {'>'}</span>
+        <span className="page-title--bracket">{'<'} </span> {title}{' '}
+        <span className="page-title--bracket"> {'>'}</span>
       </>
     </h1>
   );
