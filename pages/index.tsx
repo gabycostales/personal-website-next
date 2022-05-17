@@ -34,6 +34,7 @@ const Home: NextPage = () => {
           <ExternalLink href="https://www.swarmsolutions.com/">
             Swarm Solutions
           </ExternalLink>
+          .
         </p>
 
         <p>

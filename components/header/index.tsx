@@ -10,7 +10,10 @@ const SiteHeader = () => {
   return (
     <header className={styles.header}>
       <Link href="/">
-        <a className={`${styles.logo} box-highlight light-mode-bg`}>
+        <a
+          className={`${styles.logo} box-highlight light-mode-bg`}
+          aria-label="Home Button"
+        >
           <span>gcc</span>
         </a>
       </Link>

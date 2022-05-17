@@ -9,20 +9,24 @@ import styles from './Footer.module.css';
 type SocialMedia = {
   icon: IconDefinition;
   href: string;
+  label: string;
 };
 
 const MySocialMedia: SocialMedia[] = [
   {
     icon: faLinkedinIn,
     href: 'https://www.linkedin.com/in/gabrielacostales/',
+    label: 'LinkedIn',
   },
   {
     icon: faGithub,
     href: 'https://github.com/gabycostales',
+    label: 'GitHub',
   },
   {
     icon: faEnvelope,
     href: 'mailto:gabycostales@gmail.com',
+    label: 'Email',
   },
 ];
 
@@ -33,9 +37,9 @@ const SiteFooter = () => {
         <span>© 2021, Gabriela Costales</span>
       </div>
       <div className={styles.social}>
-        {MySocialMedia.map(({ icon, href }) => {
+        {MySocialMedia.map(({ icon, href, label }) => {
           return (
-            <ExternalLink href={href} key={href}>
+            <ExternalLink href={href} key={href} label={label}>
               <FontAwesomeIcon icon={icon} />
             </ExternalLink>
           );
