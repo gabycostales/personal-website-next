@@ -84,7 +84,7 @@ function ThemeProvider({ ...props }) {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const toggleMode = useCallback(() => {
     setIsDarkMode(!isDarkMode);
-    document.documentElement.classList.toggle('light-mode');
+    document.documentElement.classList.toggle('dark');
   }, [isDarkMode]);
 
   return (

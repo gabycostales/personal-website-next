@@ -4,10 +4,11 @@ type PageTitleProps = {
 
 const PageTitle = ({ title }: PageTitleProps) => {
   return (
-    <h1 className="page-title">
+    <h1 className="font-mono flex tracking-wide leading-none font-bold tight-word-spacing justify-around items-center text-7vw mdTablet:text-5xl">
       <>
-        <span className="page-title--bracket">{'<'} </span> {title}{' '}
-        <span className="page-title--bracket"> {'>'}</span>
+        <span className="block text-accent">{'<'} </span>{' '}
+        <span className="text-center">{title}</span>{' '}
+        <span className="block text-accent"> {'>'}</span>
       </>
     </h1>
   );

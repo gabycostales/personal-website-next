@@ -1,160 +1,11 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --dark: #222;
-  --light: #fff;
-  --blue: #679cdf;
-  --light-blue: #f6f9fc;
-  --pink: #ed64a6;
-  --purple: #9f7aea;
-  --green: #48bb78;
-  --gold: #ffdf5d;
-
-  /* Initial Values */
-  --bg-color: #222;
-  --font-color: #fff;
   --accent-color: #679cdf;
 }
 
-:root.light-mode {
-  --bg-color: rgb(255 255 255 / 90%);
-  --font-color: #000;
-}
-
-html {
-  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  background-color: var(--accent-color);
-}
-
-html.light-mode .light-mode-bg {
-  border-radius: 5px;
-  background-color: var(--light);
-}
-
-body {
-  color: var(--font-color);
-  background-color: var(--bg-color);
-}
-
-p {
-  font-size: 28px;
-  line-height: 1.3em;
-}
-
-b {
-  font-weight: 600;
-}
-
-a {
-  font-weight: 600;
-  color: var(--accent-color);
-  text-decoration: none;
-  border-bottom: 3px solid transparent;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-}
-
-a:hover {
-  border-color: var(--accent-color);
-}
-
-@media (max-width: 700px) {
-  p {
-    font-size: 5vw;
-  }
-}
-
-/* Page Styles */
-/* *********** */
-.site-container {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-}
-
-.site-content {
-  width: 95%;
-  max-width: 1100px;
-  display: flex;
-  flex-direction: column;
-}
-
-.main-container {
-  margin: 20px auto 40px;
-  width: 100%;
-  max-width: 720px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-@media (max-height: 1000px) {
-  .main-container {
-    margin-top: 40px;
-  }
-}
-
-@media (max-height: 850px) {
-  .main-container {
-    margin-top: 25px;
-  }
-}
-
-@media (max-width: 800px) {
-  .main-container {
-    max-width: 90%;
-  }
-}
-
-.box-highlight {
-  color: var(--font-color);
-  border: 1px solid var(--accent-color);
-  box-shadow: 6px 6px 0 -1px var(--accent-color);
-}
-
-.page-title {
-  display: block;
-  text-align: center;
-  font-size: 45px;
-  letter-spacing: 2px;
-}
-
-.page-title--bracket {
-  display: inline-block;
-  color: var(--accent-color);
-}
-
-@media (max-width: 750px) {
-  .page-title {
-    font-size: 40px;
-  }
-}
-
-@media (max-width: 700px) {
-  .page-title {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 8vw;
-  }
-}
-
-/* Animations */
-/* ********** */
 .page-enter {
   opacity: 0;
   transform: scale(0.9);
@@ -177,183 +28,47 @@ a:hover {
   transition: opacity 300ms, transform 300ms;
 }
 
-.wave {
-  display: inline-block;
-  animation: 3s ease-in-out infinite wave;
-}
-
-@keyframes wave {
-  0%,
-  20%,
-  40%,
-  100% {
-    transform: rotate(0deg);
+@layer base {
+  p {
+    line-height: 1.3em;
   }
-  10% {
-    transform: rotate(-20deg);
+
+  b {
+    font-weight: 600;
   }
-  30% {
-    transform: rotate(-20deg);
+
+  a {
+    font-weight: 600;
+    color: var(--accent-color);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
   }
-}
 
-/** Home **/
-.home--title {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 60px;
-}
-
-.home--subtitle {
-  display: block;
-  margin-top: 15px;
-  margin-left: auto;
-  padding: 8px 10px 10px;
-  font-style: italic;
-  font-size: 12px;
-  line-height: 1.1em;
-}
-
-.home--content {
-  padding: 20px;
-  margin: -20px;
-}
-
-.home--welcome,
-.home--shortBio {
-  margin-bottom: 20px;
-}
-
-/** Resume **/
-.resume--content {
-  padding: 20px;
-  margin: -20px;
-}
-
-.resume--title {
-  display: flex;
-  align-items: baseline;
-  margin-bottom: 20px;
-}
-
-.resume--title h2 {
-  font-size: 32px;
-  line-height: 1em;
-  letter-spacing: 2px;
-}
-
-.resume--icon {
-  width: 30px;
-  margin-right: 10px;
-  color: var(--accent-color);
-}
-
-.resume--education {
-  margin-top: 40px;
-  margin-bottom: 60px;
-}
-
-.resume--college h3 {
-  margin-bottom: 15px;
-  font-size: 25px;
-  letter-spacing: 2px;
-  font-family: 'Space Mono', monospace;
-  color: var(--accent-color);
-}
-
-.resume--college p {
-  font-size: 16px;
-  margin: 5px 0;
-}
-
-@media (max-width: 800px) {
-  .resume--education {
-    margin-top: 70px;
+  a:hover {
+    border-color: var(--accent-color);
   }
 }
 
-@media (max-width: 600px) {
-  .resume--education {
-    margin-top: 40px;
+@layer components {
+  .theme-box-highlight {
+    @apply text-dark;
+    @apply dark:text-white;
+    border: 1px solid var(--accent-color);
+    box-shadow: 6px 6px 0 -1px var(--accent-color);
+  }
+
+  .theme-light-mode-bg {
+    @apply bg-light;
+    @apply dark:bg-transparent;
+    @apply rounded-sm;
+    @apply dark:rounded-none;
   }
 }
 
-@media (max-width: 400px) {
-  .resume--college h3 {
-    font-size: 21px;
-  }
-}
-
-/** Work **/
-.job--title {
-  margin-bottom: 10px;
-}
-
-.job--title h3 {
-  font-size: 25px;
-  letter-spacing: 2px;
-  font-family: 'Space Mono', monospace;
-  color: var(--accent-color);
-}
-
-.job--company {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  font-style: italic;
-  margin-bottom: 15px;
-}
-
-.job--company p {
-  font-size: 16px;
-}
-
-.job--about {
-  margin: 10px 0;
-  padding-inline-start: 20px;
-  padding-inline-end: 40px;
-}
-
-.job--about li {
-  margin: 10px 0;
-}
-
-.job--skills {
-  margin: 15px 0;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.job--skill {
-  display: block;
-  margin: 5px;
-  padding: 7px;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-  font-size: 14px;
-  font-weight: bold;
-  z-index: 1;
-}
-
-.job--skill:first-child {
-  margin-left: 0;
-}
-
-.job--skill-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-color: var(--accent-color);
-  opacity: 0.25;
-}
-
-@media (max-width: 400px) {
-  .job--title h3 {
-    font-size: 21px;
+@layer utilities {
+  .tight-word-spacing {
+    word-spacing: -10px;
   }
 }

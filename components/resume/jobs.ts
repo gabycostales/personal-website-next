@@ -19,10 +19,9 @@ export const jobs: Job[] = [
       'Node.js',
       'React.js',
       'Nest.js',
-      'AWS',
-      'Jest',
       'PostgreSQL',
-      'Redis',
+      'Jest',
+      'AWS',
     ],
     about: [
       'Develop software applications using best practices in coordination with a distributed team.',

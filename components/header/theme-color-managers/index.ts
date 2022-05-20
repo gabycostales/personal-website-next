@@ -1,2 +1,2 @@
-export * from './theme-accent-color-toggle';
-export * from './theme-color-mode-toggle';
+export * from './AccentColorToggle';
+export * from './ColorModeToggle';

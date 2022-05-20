@@ -4,7 +4,6 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import ExternalLink from '../ExternalLink';
-import styles from './Footer.module.css';
 
 type SocialMedia = {
   icon: IconDefinition;
@@ -32,15 +31,22 @@ const MySocialMedia: SocialMedia[] = [
 
 const SiteFooter = () => {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.copyright}>
-        <span>© 2021, Gabriela Costales</span>
+    <footer className="flex justify-between items-center py-7 px-2 xsTablet:px-7">
+      <div>
+        <span className="text-xs smMobile:text-sm lgMobile:text-base">
+          © 2021, Gabriela Costales
+        </span>
       </div>
-      <div className={styles.social}>
+      <div className="flex justify-center items-center">
         {MySocialMedia.map(({ icon, href, label }) => {
           return (
-            <ExternalLink href={href} key={href} label={label}>
-              <FontAwesomeIcon icon={icon} />
+            <ExternalLink
+              href={href}
+              key={href}
+              label={label}
+              className="mr-4 smMobile:mr-6 last:mr-0 border-none no-underline"
+            >
+              <FontAwesomeIcon icon={icon} className="w-5 smMobile:w-7" />
             </ExternalLink>
           );
         })}

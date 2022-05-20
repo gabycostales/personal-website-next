@@ -1,28 +1,28 @@
 import Link from 'next/link';
 
-import {
-  ThemeAccentColorToggle,
-  ThemeColorModeToggle,
-} from './theme-color-managers';
-import styles from './Header.module.css';
+import { AccentColorToggle, ColorModeToggle } from './theme-color-managers';
 
 const SiteHeader = () => {
   return (
-    <header className={styles.header}>
+    <header className="flex justify-between items-center py-7 px-2 xsTablet:px-7">
       <Link href="/">
         <a
-          className={`${styles.logo} box-highlight light-mode-bg`}
+          className="theme-light-mode-bg theme-box-highlight pt-1 px-4 pb-4"
           aria-label="Home Button"
         >
-          <span>gcc</span>
+          <span className="font-mono font-semibold leading-[1em] text-xl mobile:text-3xl">
+            gcc
+          </span>
         </a>
       </Link>
-      <div className={styles.toggles}>
+      <div className="flex items-center">
         <Link href="/resume" passHref>
-          <a className={styles.link}>resume</a>
+          <a className="font-mono tracking-wide text-base mobile:text-lg mr-3 mobile:mr-6 ">
+            resume
+          </a>
         </Link>
-        <ThemeAccentColorToggle />
-        <ThemeColorModeToggle />
+        <AccentColorToggle />
+        <ColorModeToggle />
       </div>
     </header>
   );
