@@ -1,3 +1,8 @@
+# Personal Website
+
+This is my personal website built with Next.js!
+You can check it out by visiting [gabycostales.com](https://www.gabycostales.com/), or follow the build setup below.
+
 ## Build Setup
 
 First, run the development server:
