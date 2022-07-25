@@ -23,25 +23,22 @@ const Home: NextPage = () => {
         }`}
       >
         <p className="mb-5 lgMobile:mb-7 text-5vw xsTablet:text-xl smTablet:text-2xl">
-          <b>Hi!</b> Welcome to my website.{' '}
+          <b>Hi!</b> Welcome to my website{' '}
           <span className="animate-wave inline-block">👋🏼</span>
         </p>
 
         <p className="mb-5 lgMobile:mb-7 text-5vw xsTablet:text-xl smTablet:text-2xl">
-          I{"'"}m a senior software engineer born and raised in Miami, FL 🌴.
-          Coding is my craft and I love building things that are useful to other
-          people with emerging web technologies. I currently work for{' '}
-          <ExternalLink href="https://www.swarmsolutions.com/">
-            Swarm Solutions
-          </ExternalLink>
-          .
+          I{"'"}m a software engineer born and raised in Miami, FL 🌴
         </p>
 
-        <p className="text-5vw xsTablet:text-xl smTablet:text-2xl">
-          I justed finished rebuilding this site with{' '}
-          <ExternalLink href="https://www.nextjs.org">Next.js</ExternalLink> and
-          I plan to add more to it soon, but in the meantime check out my{' '}
-          <Link href="/resume">resume</Link>!
+        <p className="mb-5 lgMobile:mb-7 text-5vw xsTablet:text-xl smTablet:text-2xl">
+          Coding is my craft and I love building things that are useful to other
+          people with emerging web technologies 👩‍💻
+        </p>
+
+        <p className="mb-5 lgMobile:mb-7 text-5vw xsTablet:text-xl smTablet:text-2xl">
+          I currently work for{' '}
+          <ExternalLink href="https://www.stripe.com/">Stripe</ExternalLink> 💜
         </p>
       </section>
     </>

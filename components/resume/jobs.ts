@@ -9,10 +9,20 @@ export type Job = {
 
 export const jobs: Job[] = [
   {
+    title: 'Software Engineer',
+    company: 'Stripe',
+    startDate: 'June 2022',
+    endDate: 'Present',
+    skills: ['Ruby', 'JavaScript', 'TypeScript'],
+    about: [
+      'Building internal tools that help stripe.com (and other sites) be as performant and easy to update as they are beautifully designed.',
+    ],
+  },
+  {
     title: 'Senior Software Engineer',
     company: 'Swarm Solutions',
     startDate: 'July 2021',
-    endDate: 'Present',
+    endDate: 'June 2022',
     skills: [
       'JavaScript',
       'TypeScript',
@@ -24,10 +34,10 @@ export const jobs: Job[] = [
       'AWS',
     ],
     about: [
-      'Develop software applications using best practices in coordination with a distributed team.',
-      'Architect complex software features and functionality in a maintainable, DRY, abstract, and modular way.',
-      'Demonstrate expert understanding of server-side and client-side JavaScript and asynchronous JavaScript code.',
-      'Augment engineering teams and not only deliver quality code, but also demonstrate engineering leadership by being an effective communicator and improving engineering processes.',
+      'Developed software applications using best practices in coordination with a distributed team.',
+      'Architected complex software features and functionality in a maintainable, DRY, abstract, and modular way.',
+      'Demonstrated expert understanding of server-side and client-side JavaScript and asynchronous JavaScript code.',
+      'Augmented engineering teams and not only delivered quality code, but also demonstrated engineering leadership by being an effective communicator and improving engineering processes.',
     ],
   },
   {

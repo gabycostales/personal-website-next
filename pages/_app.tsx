@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               timeout={200}
               classNames="page"
             >
-              <main className="w-full max-w-[90%] lgTablet:max-w-[720px] mx-auto mt-8 mdHeight:mt-10 lgHeight:mt-7 mb-10 flex-1 flex flex-col justify-center">
+              <main className="w-full max-w-[90%] lgTablet:max-w-[736px] mx-auto mt-8 mdHeight:mt-10 lgHeight:mt-7 mb-10 flex-1 flex flex-col justify-center">
                 <Component {...pageProps} />
               </main>
             </CSSTransition>

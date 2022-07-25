@@ -1,7 +1,8 @@
 # Personal Website
 
 This is my personal website built with Next.js!
-You can check it out by visiting [gabycostales.com](https://www.gabycostales.com/), or follow the build setup below.
+
+You can check it out by visiting [gabycostales.com](https://www.gabycostales.com/), or run the build setup below to see it locally.
 
 ## Build Setup
 
@@ -13,4 +14,4 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open good 'ole [http://localhost:3000](http://localhost:3000)
